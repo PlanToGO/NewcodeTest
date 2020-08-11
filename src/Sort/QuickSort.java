@@ -40,6 +40,7 @@ public class QuickSort {
 
     /**
      * 主函数，排序的函数，通过递归实现一直到底的quicksort
+     * 时间复杂度，最佳Onlogn，最差On2，平均Onlogn
      * @param array
      * @param start
      * @param end
