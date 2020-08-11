@@ -8,28 +8,30 @@ package Sort;
 
 public class ShellSort {
     public static int[] shellsort(int[] array){
-        //len为现在的长度
+        if (array.length==0) return array;
+        int tmp;
         int len = array.length;
-        int temp;
-        //定义gap
         int gap = len/2;
-        while (gap > 1){
-            for (int i = 0 ; i<len ; i++){
-                //先把当前遍历的元素的值赋给temp
-                temp = array[i];
+        while (gap>0){
+            for (int i=gap;i< array.length;i++){
+                tmp=array[i];
                 int preIndex = i-gap;
-                //当前一个元素大于当前元素的时候
-                while (preIndex>=0 && array[preIndex] > temp){
-                    //把前一个元素的值赋给这个元素
-                    array[preIndex + gap]=array[preIndex];
-                    //再查找下一个preIndex
+                while (preIndex>=0&&array[preIndex]>tmp){
+                    array[preIndex+gap]= array[preIndex];
                     preIndex -= gap;
                 }
-                //当前一个元素小于或等于当前元素的时候，还回来这个值
-                array[preIndex + gap]=temp;
+                array[preIndex+gap]=tmp;
             }
             gap /= 2;
         }
         return array;
+    }
+
+    public static void main(String[] args) {
+        int[] array = new int[]{2,6,8,4,234,678,4523,787,2,6,234,65,8,233};
+        int[] ans = shellsort(array);
+        for (int num:ans){
+            System.out.println(num);
+        }
     }
 }
