@@ -1,5 +1,10 @@
 package Sort;
 
+/**
+ * 选择排序，也是两次遍历，外循环用来控制循环到哪个数字，内循环用来控制找到最小的数字
+ * 时间复杂度上，最好On2，最差On2，平均On2
+ */
+
 public class SelectionSort {
     public static int[] selectionsort(int[] array){
         if (array.length == 0 ) return array;

@@ -1,5 +1,10 @@
 package Sort;
 
+/**
+ * 冒泡排序，前后对比，如果后边的比前边的要小，就放在前边
+ * 如此遍历，最好时间复杂度On，最差On2，平均On2
+ */
+
 public class BubbleSort {
     public static int[] bubblesort(int[] array){
         //如果是列表的长度为0，则直接返回数组

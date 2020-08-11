@@ -1,5 +1,10 @@
 package Sort;
 
+/**
+ * 插入排序，原理是前边已经排序了，对后边的数字进行排序
+ * 时间复杂度上，最好的情况On，最坏的情况On2，平均情况On2
+ */
+
 public class InsertionSort {
     public static int[] insertionsort(int[] array){
         if (array.length == 0) return array;
