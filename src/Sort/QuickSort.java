@@ -46,7 +46,7 @@ public class QuickSort {
      * @param end
      * @return
      */
-    public int[] quicksort(int[] array,int start,int end){
+    public static int[] quicksort(int[] array,int start,int end){
         if (array.length<1||start<0||end>array.length||start>end) return null;
         int smallIndex = partition(array,start,end);
         if (smallIndex>start){
@@ -56,5 +56,13 @@ public class QuickSort {
             quicksort(array,smallIndex+1,end);
         }
         return array;
+    }
+
+    public static void main(String[] args) {
+        int[] array = new int[]{5,10,7,4,12,435,234,657,2345,7898,3,8,5};
+        quicksort(array,0,array.length-1);
+        for (int num:array){
+            System.out.println(num);
+        }
     }
 }

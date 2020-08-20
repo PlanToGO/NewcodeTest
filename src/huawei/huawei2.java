@@ -1,4 +1,4 @@
-package questions;
+package huawei;
 
 /**
  * 题目：转换为质数因子

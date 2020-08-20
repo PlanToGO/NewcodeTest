@@ -1,4 +1,4 @@
-package questions;
+package huawei;
 
 import java.util.Scanner;
 
