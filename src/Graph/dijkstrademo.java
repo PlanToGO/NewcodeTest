@@ -45,7 +45,7 @@ public class dijkstrademo {
                 {7,INF,4,0,6,INF},
                 {INF,5,4,6,0,3},
                 {INF,4,INF,INF,3,0}};
-        int[] vetex = new int[]{0,1,2,3,4,5};
-        System.out.println(Arrays.toString(dijkstra(matrix,vetex,1)));
+        int[] vetex = new int[]{0,0,0,0,0,0};
+        System.out.println(Arrays.toString(dijkstra(matrix,vetex,0)));
     }
 }
