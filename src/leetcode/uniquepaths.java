@@ -17,8 +17,4 @@ public class uniquepaths {
         }
         return dp[m-1][n-1];
     }
-
-    public static void main(String[] args) {
-        System.out.println(uniquePaths(4,4));
-    }
 }

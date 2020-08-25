@@ -54,6 +54,5 @@ public class LCS2 {
         }
         System.out.print("最长公共子串是： ");
         System.out.println(String.copyValueOf(a).substring(index-result,index));
-        System.out.println(" ");
     }
 }
