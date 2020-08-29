@@ -19,10 +19,10 @@ public class permutedemo {
             foodlist.add(Arrays.copyOf(food,food.length));
             return;
         }
-        HashSet<String> set = new HashSet<>();
+//        HashSet<String> set = new HashSet<>();
         for (int i=x;i<food.length;i++){
-            if (set.contains(food[i])) continue;
-            set.add(food[i]);
+//            if (set.contains(food[i])) continue;
+//            set.add(food[i]);
             swap(food,i,x);
             dfs(x+1);
             swap(food,i,x);

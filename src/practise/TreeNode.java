@@ -5,6 +5,6 @@ public class TreeNode {
     TreeNode left;
     TreeNode right;
     public TreeNode(int x){
-        val=x;
+        val=x;TreeNode left=null;TreeNode right=null;
     }
 }

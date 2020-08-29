@@ -1,28 +1,23 @@
 package practise;
 
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 
 public class Solution {
-    public List<List<Integer>> levelOrder(TreeNode root){
-        List<List<Integer>> res = new ArrayList<>();
-        if (root==null) return res;
-        LinkedList<TreeNode> tmp = new LinkedList<>();
-        tmp.add(root);
-        while (!tmp.isEmpty()){
-            ArrayList<Integer> arrayList = new ArrayList<>();
-            int size = tmp.size();
-            for (int i=0;i<size;i++){
-                root = tmp.poll();
-                arrayList.add(root.val);
-                if (root.left!=null) tmp.add(root.left);
-                if (root.right!=null) tmp.add(root.right);
+    public static void main(String[] args) {
+        String str = "aabbb";
+        StringBuilder sb = new StringBuilder(str);
+        int index =0;
+        while (index<sb.length()){
+            if (sb.charAt(index)=='b'){
+                sb.deleteCharAt(index);
+                break;
+            }else {
+                index++;
             }
-            res.add(arrayList);
         }
-        return res;
+        System.out.println(sb.toString());
+        Map<String ,String> map = new HashMap<>();
     }
 }
