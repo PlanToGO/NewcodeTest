@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class permute {
     public static void main(String[] args) {
-        String s = "abb";
+        String s = "234";
         System.out.println(Arrays.toString(permutation(s)));
     }
     static List<String> res = new LinkedList<>();

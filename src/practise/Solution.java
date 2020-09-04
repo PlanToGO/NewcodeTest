@@ -1,23 +1,25 @@
 package practise;
 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
-
-public class Solution {
-    public static void main(String[] args) {
-        String str = "aabbb";
-        StringBuilder sb = new StringBuilder(str);
-        int index =0;
-        while (index<sb.length()){
-            if (sb.charAt(index)=='b'){
-                sb.deleteCharAt(index);
-                break;
-            }else {
-                index++;
+public class Solution{
+    public List<List<Integer>> levelorder(TreeNode root){
+        List<List<Integer>> res = new ArrayList<>();
+        if (root==null) return res;
+        //建立一个辅助的队列
+        LinkedList<TreeNode> linkedList = new LinkedList();
+        linkedList.push(root);
+        while (!linkedList.isEmpty()){
+            ArrayList<Integer> tmp = new ArrayList<>();
+            int size = linkedList.size();
+            for (int i=0;i<size;i++){
+                tmp.add(linkedList.get(i).val);
             }
+            res.add(tmp);
         }
-        System.out.println(sb.toString());
-        Map<String ,String> map = new HashMap<>();
+        return res;
     }
 }
