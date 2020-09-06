@@ -2,24 +2,29 @@ package practise;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Arrays;
 
 public class Solution{
-    public List<List<Integer>> levelorder(TreeNode root){
-        List<List<Integer>> res = new ArrayList<>();
-        if (root==null) return res;
-        //建立一个辅助的队列
-        LinkedList<TreeNode> linkedList = new LinkedList();
-        linkedList.push(root);
-        while (!linkedList.isEmpty()){
-            ArrayList<Integer> tmp = new ArrayList<>();
-            int size = linkedList.size();
-            for (int i=0;i<size;i++){
-                tmp.add(linkedList.get(i).val);
+    public static int[] two_sum(int[] array,int target,int length){
+        ArrayList<int[]> arrayList = new ArrayList<>();
+        for (int i=0;i<length;i++){
+            for (int j=i+1;j<length;j++){
+                if (array[i]+array[j]==target){
+                    int[] ans = new int[2];
+                    ans[0]=i;
+                    ans[1]=j;
+                    arrayList.add(ans);
+                    break;
+                }
             }
-            res.add(tmp);
         }
-        return res;
+        return arrayList.get(0);
+    }
+
+    public static void main(String[] args) {
+        int[] a = {0,1,2,3};
+        int length=4;
+        int target = 1;
+        System.out.println(Arrays.toString(two_sum(a,target,length)));
     }
 }
