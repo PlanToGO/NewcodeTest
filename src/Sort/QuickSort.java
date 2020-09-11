@@ -1,5 +1,7 @@
 package Sort;
 
+import java.util.Random;
+
 public class QuickSort {
     /**
      * 先写一个交换数组中元素的方法

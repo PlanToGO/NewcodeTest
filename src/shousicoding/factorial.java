@@ -1,6 +1,24 @@
 package shousicoding;
 
+import java.util.Scanner;
+
 public class factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = factorialn(sc.nextInt());
+        System.out.println(str);
+    }
+
+    private static String factorialn(int n) {
+        if (n<=1) return "1";
+        String tmp = mul(Integer.toString(n),Integer.toString(n-1));
+        while (n>3){
+            tmp = mul(tmp,Integer.toString(n-2));
+            n--;
+        }
+        return tmp;
+    }
+
     public static String mul(String s1,String s2){
         //先把字符串转换为字符数组
         char[] c1 = s1.toCharArray();
